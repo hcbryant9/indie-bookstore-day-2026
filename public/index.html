@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Indie Bookstore Day</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* Reset default spacing */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: white;
+            border-bottom: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        header img {
+            height: 40px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: black;
+        }
+
+        /* Push page content below fixed header */
+        main {
+            margin-top: 90px;
+        }
+
+        /* ===== HOME SECTION ===== */
+        .home-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .home-section img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* ===== MAP SECTION ===== */
+        .map-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .map-section iframe {
+            width: 100%;
+            max-width: 900px;
+            height: 500px;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <img src="logo.png" alt="Indie Bookstore Day Logo">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Bookstores</a>
+            <a href="#">Other Partners</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HOME SECTION -->
+        <section class="home-section">
+            <img src="logo.png" alt="Indie Bookstore Day Logo">
+            <h1>Greater Richmond Bookstores</h1>
+            <p>- Richmond is For Booklovers -</p>
+        </section>
+
+        <!-- MAP SECTION -->
+        <section class="map-section">
+            <h2>Participating Bookstores</h2>
+            <iframe 
+                src="https://www.google.com/maps/d/u/0/embed?mid=1jPRNX-BkbsX_cranuQt0GxW6km-PmbA&ehbc=2E312F&noprof=1">
+            </iframe>
+        </section>
+
+    </main>
+
+</body>
+</html>
