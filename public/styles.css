@@ -500,7 +500,7 @@ a {
 
 .footer-links a {
   opacity: 0.9;
-  transition: opacity 0.2s ease;
+  /* transition: opacity 0.2s ease; */
 }
 
 .footer-links a:hover {
