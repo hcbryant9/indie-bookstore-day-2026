@@ -1,103 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Indie Bookstore Day</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        /* Reset default spacing */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        /* ===== HEADER ===== */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            background: white;
-            border-bottom: 1px solid black;
-            box-sizing: border-box;
-        }
-
-        header img {
-            height: 40px;
-        }
-
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: black;
-        }
-
-        /* Push page content below fixed header */
-        main {
-            margin-top: 90px;
-        }
-
-        /* ===== HOME SECTION ===== */
-        .home-section {
-            text-align: center;
-            padding: 60px 20px;
-        }
-
-        .home-section img {
-            max-width: 300px;
-            width: 100%;
-            height: auto;
-        }
-
-        /* ===== MAP SECTION ===== */
-        .map-section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .map-section iframe {
-            width: 100%;
-            max-width: 900px;
-            height: 500px;
-            border: none;
-        }
-
-    </style>
+  <meta charset="UTF-8" />
+  <title>Indie Bookstore Day Richmond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container header-inner reveal reveal-on-load">
+        <a href="#home" class="brand">
+          <!-- <img src="./assets/images/bookpeople.png" alt="Indie Bookstore Day Richmond logo"> -->
+          <span>Indie Bookstore Day</span>
+        </a>
 
-    <!-- HEADER -->
-    <header>
-        <img src="logo.png" alt="Indie Bookstore Day Logo">
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Bookstores</a>
-            <a href="#">Other Partners</a>
+        <nav class="site-nav">
+          <a href="#home">Home</a>
+          <a href="#bookstores">Bookstores</a>
+          <a href="#map">Map</a>
+          <a href="#passport">Passport</a>
         </nav>
+      </div>
     </header>
 
     <main>
+      <section class="hero section-space" id="home">
+        <div class="container">
+          <div class="hero-card reveal reveal-on-load">
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
 
-        <!-- HOME SECTION -->
-        <section class="home-section">
-            <img src="logo.png" alt="Indie Bookstore Day Logo">
-            <h1>Greater Richmond Bookstores</h1>
-            <p>- Richmond is For Booklovers -</p>
-        </section>
+            <div class="hero-content">
+              <p class="hero-kicker">Independent Bookstore Day • Richmond</p>
+              <h1>Greater Richmond Bookstores</h1>
+              <p class="hero-tagline">Richmond is For Booklovers</p>
 
-        <!-- MAP SECTION -->
-        <section class="map-section">
-            <h2>Participating Bookstores</h2>
-            <iframe 
-                src="https://www.google.com/maps/d/u/0/embed?mid=1jPRNX-BkbsX_cranuQt0GxW6km-PmbA&ehbc=2E312F&noprof=1">
-            </iframe>
-        </section>
+              <div class="hero-actions">
+                <a class="button button-primary" href="#bookstores">Explore Stores</a>
+                <a class="button button-secondary" href="#map">View the Map</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- <section class="intro-strip reveal" aria-label="About the event">
+        <div class="container">
+          <p>
+            Celebrate Independent Bookstore Day by exploring bookstores across Greater Richmond,
+            planning your route, and supporting the local literary community.
+          </p>
+        </div>
+      </section> -->
+
+      <section class="bookstores-section section-space" id="bookstores">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Participating Shops</p>
+            <h2>Bookstores Around Richmond</h2>
+            <p>
+              Visit each store’s website for details, events, and updates for the day.
+            </p>
+          </div>
+
+          <div class="bookstores-grid">
+            <a class="store-card reveal" href="https://bbgbbooks.com/" target="_blank" rel="noopener noreferrer">
+              <img class="store-logo" src="./assets/images/bbgb.jpg" alt="BBGB logo">
+              <h3 class="store-name">BBGB</h3>
+              <p class="store-hours">
+                Mon–Sat: 10am–6pm<br>
+                Sun: 11am–5pm
+              </p>
+              
+            </a>
+
+            <a class="store-card reveal" href="https://briansbooksrichmond.com/" target="_blank" rel="noopener noreferrer">
+              <img class="store-logo" src="./assets/images/brians.png" alt="Brian's Books logo">
+              <h3 class="store-name">Brian's Books</h3>
+              <p class="store-hours">
+                Tue–Sat: 9am–7pm<br>
+                Sun: 10am–4pm
+              </p>
+              
+            </a>
+
+            <a class="store-card reveal" href="https://www.bookpeoplerichmond.com/" target="_blank" rel="noopener noreferrer">
+              <img class="store-logo" src="./assets/images/bookpeople.png" alt="Book People logo">
+              <h3 class="store-name">Book People</h3>
+              <p class="store-hours">
+                Mon–Sat: 10am–6pm<br>
+                Sun: 11am–5pm
+              </p>
+              
+            </a>
+
+            <a class="store-card reveal" href="https://www.fountainbookstore.com/" target="_blank" rel="noopener noreferrer">
+              <img class="store-logo" src="./assets/images/fountain.jfif" alt="Fountain Bookstore logo">
+              <h3 class="store-name">Fountain Bookstore</h3>
+              <p class="store-hours">
+                Tue–Sat: 9am–7pm<br>
+                Sun: 10am–4pm
+              </p>
+              
+            </a>
+
+            <a class="store-card reveal" href="https://www.ilysmbooks.com/" target="_blank" rel="noopener noreferrer">
+              <img class="store-logo" src="./assets/images/ilysm.jfif" alt="ILYSM Books logo">
+              <h3 class="store-name">ILYSM Books</h3>
+              <p class="store-hours">
+                Mon–Sat: 10am–6pm<br>
+                Sun: 11am–5pm
+              </p>
+              
+            </a>
+
+            <a class="store-card reveal" href="https://www.thelittlebookshopva.com/" target="_blank" rel="noopener noreferrer">
+              <img class="store-logo" src="./assets/images/little.png" alt="Little Bookshop logo">
+              <h3 class="store-name">Little Bookshop</h3>
+              <p class="store-hours">
+                Tue–Sat: 9am–7pm<br>
+                Sun: 10am–4pm
+              </p>
+              
+            </a>
+
+            <a class="store-card reveal" href="https://www.midlothianbookexchange.com/" target="_blank" rel="noopener noreferrer">
+              <img class="store-logo" src="./assets/images/midlo.png" alt="Midlothian Book Exchange logo">
+              <h3 class="store-name">Midlothian Book Exchange</h3>
+              <p class="store-hours">
+                Mon–Sat: 10am–6pm<br>
+                Sun: 11am–5pm
+              </p>
+              
+            </a>
+
+            <a class="store-card reveal" href="https://shelflifebooksrva.com/" target="_blank" rel="noopener noreferrer">
+              <img class="store-logo" src="./assets/images/shelf.png" alt="Shelf Life logo">
+              <h3 class="store-name">Shelf Life</h3>
+              <p class="store-hours">
+                Tue–Sat: 9am–7pm<br>
+                Sun: 10am–4pm
+              </p>
+              
+            </a>
+
+            <a class="store-card reveal" href="https://www.smallfriend.org/" target="_blank" rel="noopener noreferrer">
+              <img class="store-logo" src="./assets/images/small.jfif" alt="Small Friend logo">
+              <h3 class="store-name">Small Friend</h3>
+              <p class="store-hours">
+                Mon–Sat: 10am–6pm<br>
+                Sun: 11am–5pm
+              </p>
+              
+            </a>
+
+            <a class="store-card reveal" href="https://resistbooksellers.com/" target="_blank" rel="noopener noreferrer">
+              <img class="store-logo" src="./assets/images/resist.jfif" alt="Resist Booksellers logo">
+              <h3 class="store-name">Resist Booksellers</h3>
+              <p class="store-hours">
+                Tue–Sat: 9am–7pm<br>
+                Sun: 10am–4pm
+              </p>
+              
+            </a>
+
+            <a class="store-card reveal" href="https://linktr.ee/abisbooksandbrews" target="_blank" rel="noopener noreferrer">
+              <img class="store-logo" src="./assets/images/abis.jfif" alt="Abi's Books & Brews logo">
+              <h3 class="store-name">Abi's Books & Brews</h3>
+              <p class="store-hours">
+                Tue–Sat: 9am–7pm<br>
+                Sun: 10am–4pm
+              </p>
+              
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="map" class="section-space">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Plan Your Route</p>
+            <h2>Bookstore Map</h2>
+            <p>Plan your stops and explore the participating locations across Greater Richmond.</p>
+          </div>
+
+          <div class="map-wrap reveal">
+            <div class="map-panel">
+              <iframe
+                src="https://www.google.com/maps/d/u/0/embed?mid=1jPRNX-BkbsX_cranuQt0GxW6km-PmbA&ehbc=2E312F&noprof=1"
+                loading="lazy"
+                title="Greater Richmond bookstores map">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="passport" class="section-space">
+        <div class="container">
+          <div class="passport-card reveal">
+            <div class="section-heading">
+              <p class="section-kicker">Bookstore Day Guide</p>
+              <h2>Passport</h2>
+              <p>Download your passport here.</p>
+            </div>
+
+            <a class="button button-primary" href="#" download>Download Passport</a>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <footer class="site-footer reveal">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-title">Indie Bookstore Day Richmond</p>
+          <p>Celebrating local bookstores and the readers who love them.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#bookstores">Bookstores</a>
+          <a href="#map">Map</a>
+          <a href="#passport">Passport</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const revealItems = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px"
+      }
+    );
+
+    revealItems.forEach((item, index) => {
+      if (!item.classList.contains("reveal-on-load")) {
+        item.style.transitionDelay = `${Math.min(index * 40, 240)}ms`;
+      }
+      revealObserver.observe(item);
+    });
+
+    window.addEventListener("load", () => {
+      document.body.classList.add("page-loaded");
+      document.querySelectorAll(".reveal-on-load").forEach((item, index) => {
+        setTimeout(() => item.classList.add("is-visible"), 120 + index * 90);
+      });
+    });
+  </script>
 </body>
 </html>
