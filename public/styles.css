@@ -64,7 +64,7 @@ body::after {
     linear-gradient(rgba(4, 45, 98, 0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(4, 45, 98, 0.035) 1px, transparent 1px);
   background-size: 36px 36px;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.15));
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.15));
 }
 
 body.page-loaded {
@@ -80,13 +80,90 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.store-card {
+  text-align: center;
+}
 
+.store-logo-link {
+  display: block;
+  width: 100%;
+}
+
+.store-logo-link:hover .store-logo {
+  transform: scale(1.02);
+}
+
+.store-logo {
+  transition: transform 0.25s ease;
+}
+
+.store-name {
+  margin: 0 0 8px;
+}
+
+.store-name-link {
+  color: var(--navy);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.store-name-link:hover {
+  color: var(--mahogany);
+}
+
+.store-address {
+  margin: 0 0 10px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: rgba(17, 17, 17, 0.66);
+}
+
+.store-hours {
+  margin: 0;
+}
 .page-shell {
   overflow-x: clip;
   position: relative;
   isolation: isolate;
 }
+.store-address {
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
 
+.store-address:hover {
+  color: var(--mahogany);
+  opacity: 0.9;
+}
+
+/* tooltip */
+.store-address::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: -26px;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--navy);
+  color: white;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.store-address:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* copied state */
+.store-address.copied {
+  color: var(--pacific);
+}
 .page-shell::before,
 .page-shell::after {
   content: "";
@@ -127,10 +204,10 @@ a {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(243, 239, 193, 0.58);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(243, 239, 193, 0.52);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.32);
   box-shadow: 0 8px 24px rgba(4, 45, 98, 0.06);
 }
 
@@ -146,6 +223,7 @@ a {
   display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
   font-size: 1rem;
   font-weight: 800;
   color: var(--navy);
@@ -197,7 +275,7 @@ a {
 .hero-card {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,248,221,0.92));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 248, 221, 0.92));
   border: var(--border-soft);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
@@ -376,11 +454,11 @@ a {
 .store-card {
   position: relative;
   display: block;
-  min-height: 260px;
-  background: rgba(255,255,255,0.88);
+  min-height: 250px;
+  background: rgba(255, 255, 255, 0.88);
   border: var(--border-soft);
   border-radius: 22px;
-  padding: 24px 20px;
+  padding: 12px 4px;
   color: var(--ink);
   box-shadow: var(--shadow-card);
   transition:
@@ -394,7 +472,7 @@ a {
   transform: translateY(-8px);
   box-shadow: 0 18px 38px rgba(4, 45, 98, 0.16);
   border-color: rgba(26, 166, 191, 0.35);
-  background: rgba(255,255,255,0.97);
+  background: rgba(255, 255, 255, 0.97);
 }
 
 .store-card::before {
@@ -403,7 +481,7 @@ a {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(145deg, rgba(26,166,191,0.18), rgba(202,154,218,0.12));
+  background: linear-gradient(145deg, rgba(26, 166, 191, 0.18), rgba(202, 154, 218, 0.12));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -425,7 +503,7 @@ a {
 }
 
 .store-hours {
-  margin: 0 0 16px;
+  margin: 0 0 8px;
   font-size: 0.95rem;
   line-height: 1.6;
   color: rgba(17, 17, 17, 0.8);
@@ -441,7 +519,7 @@ a {
 
 /* Map */
 .map-wrap {
-  background: linear-gradient(145deg, rgba(26,166,191,0.95), rgba(4,45,98,0.85));
+  background: linear-gradient(145deg, rgba(26, 166, 191, 0.95), rgba(4, 45, 98, 0.85));
   border-radius: 30px;
   padding: 20px;
   box-shadow: var(--shadow-soft);
@@ -463,7 +541,7 @@ a {
 
 /* Passport */
 .passport-card {
-  background: rgba(255,255,255,0.84);
+  background: rgba(255, 255, 255, 0.84);
   border: var(--border-soft);
   border-radius: 28px;
   box-shadow: var(--shadow-soft);
@@ -500,7 +578,6 @@ a {
 
 .footer-links a {
   opacity: 0.9;
-  /* transition: opacity 0.2s ease; */
 }
 
 .footer-links a:hover {
@@ -511,24 +588,26 @@ a {
 /* Reveal animation */
 .reveal {
   opacity: 0;
-  transform: translateY(34px);
+  transform: translateY(24px);
   transition:
-    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Glass treatment */
 .store-card,
 .passport-card,
 .intro-strip .container,
 .hero-card {
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
+
 .hero,
 .bookstores-section,
 #map,
@@ -557,7 +636,7 @@ a {
 
 .hero::before {
   background:
-    radial-gradient(circle at 50% 20%, rgba(255,255,255,0.35), transparent 40%);
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.35), transparent 40%);
 }
 
 .bookstores-section::before {
@@ -575,24 +654,108 @@ a {
   background:
     radial-gradient(circle at 50% 50%, rgba(189, 0, 28, 0.07), transparent 36%);
 }
-/* Responsive */
+
+/* Tablet */
+@media (max-width: 960px) {
+  .hero-card {
+    padding: 60px 24px;
+  }
+
+  .map-panel iframe {
+    height: 500px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 720px) {
+  body {
+    background: linear-gradient(180deg, #f8f4cf 0%, #f4efc8 35%, #f7f2d7 100%);
+  }
+
+  body::before,
+  body::after,
+  .page-shell::before,
+  .page-shell::after {
+    display: none;
+  }
+
+  .site-header {
+    background: rgba(243, 239, 193, 0.34);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: 1px solid rgba(4, 45, 98, 0.08);
+    box-shadow: 0 6px 16px rgba(4, 45, 98, 0.05);
+  }
+
   .header-inner {
-    padding: 14px 0;
-    flex-direction: column;
-    align-items: flex-start;
+    min-height: 64px;
+    padding: 10px 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: 0.82rem;
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+  }
+
+  .brand span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .site-nav {
-    gap: 14px;
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .site-nav a {
+    font-size: 0.74rem;
+    white-space: nowrap;
+  }
+
+  .site-nav a::after {
+    bottom: -3px;
+  }
+
+  .section-space {
+    padding: 34px 0 56px;
   }
 
   .hero {
-    padding-top: 44px;
+    padding-top: 32px;
   }
 
   .hero-card {
-    padding: 52px 20px;
+    padding: 40px 18px;
+    border-radius: 24px;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .hero-kicker {
+    font-size: 0.75rem;
+    padding: 8px 12px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.1rem, 10vw, 3.2rem);
+    line-height: 0.96;
+  }
+
+  .hero-tagline {
+    margin-top: 14px;
+    font-size: 1rem;
   }
 
   .hero-actions {
@@ -603,12 +766,90 @@ a {
     width: 100%;
   }
 
+  .bookstores-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .store-card {
+    min-height: unset;
+    padding: 20px 16px;
+    border-radius: 18px;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .store-logo {
+    max-height: 88px;
+    margin-bottom: 14px;
+  }
+
+  .store-name {
+    font-size: 1.1rem;
+  }
+
+  .store-hours {
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .map-wrap {
+    padding: 14px;
+    border-radius: 22px;
+  }
+
+  .map-panel {
+    border-radius: 16px;
+  }
+
   .map-panel iframe {
-    height: 420px;
+    height: 360px;
+  }
+
+  .passport-card,
+  .intro-strip .container {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .passport-card {
+    padding: 30px 18px;
+    border-radius: 22px;
   }
 
   .footer-inner {
     flex-direction: column;
+  }
+
+  .footer-links {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: min(100% - 24px, var(--max-width));
+  }
+
+  .brand {
+    font-size: 0.76rem;
+  }
+
+  .site-nav {
+    gap: 8px;
+  }
+
+  .site-nav a {
+    font-size: 0.68rem;
+  }
+
+  .hero-card {
+    padding: 34px 16px;
+  }
+
+  .map-panel iframe {
+    height: 320px;
   }
 }
 
