@@ -89,7 +89,7 @@ body.page-loaded {
 /* Large landing logo */
 
 .hero-logo-large {
-  width: clamp(320px, 52vw, 640px);
+  width: clamp(120px, 28vw, 640px);
   margin: 0 auto 6px;
   display: block;
 
