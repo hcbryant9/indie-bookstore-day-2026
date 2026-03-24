@@ -6,10 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
+  
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -33,12 +30,34 @@
 
     <main>
       <section class="hero section-space" id="home">
-      <div class="container reveal reveal-on-load hero-simple">
-        <img src="./assets/images/IBD_LOGO-removebg-preview.png"
+        <div class="container reveal reveal-on-load hero-simple">
+          <img
+            src="./assets/images/higher res ibd logo transparent.png"
             alt="Indie Bookstore Day Richmond logo"
-            class="hero-logo-large">
-      </div>
-    </section>
+            class="hero-logo-large"
+          >
+
+          <div class="tour-info-card reveal">
+            <p class="tour-info-label">Tour Information</p>
+            <p>
+              Celebrate with us and begin the tour on Independent Bookstore Day,
+              <strong>Saturday, April 25, 2026!</strong>
+            </p>
+            <p>
+              The tour kicks off on Independent Bookstore Day and continues until
+              <strong>May 16th</strong>.
+            </p>
+            <p>
+              To get started, print the passport on this page, and bring it to every
+              bookstore you visit!
+            </p>
+            <p>
+              When you collect all 11 stamps, submit your passport to be entered into a
+              drawing for a <strong>$50 gift card from each participating store!</strong>
+            </p>
+          </div>
+        </div>
+      </section>
 
      
       <section class="bookstores-section section-space" id="bookstores">
@@ -54,7 +73,7 @@
               <div class="store-card-inner">
                 <div class="store-face store-face-front">
                   <a class="store-logo-link" href="https://linktr.ee/abisbooksandbrews" target="_blank" rel="noopener noreferrer" aria-label="Visit Abi's Books & Brews website">
-                    <img class="store-logo" src="./assets/images/abis.jfif" alt="Abi's Books & Brews logo" loading="lazy" decoding="async">
+                    <img class="store-logo" src="./assets/images/abis.png" alt="Abi's Books & Brews logo" loading="lazy" decoding="async">
                   </a>
                   <h3 class="store-name">
                     <a class="store-name-link" href="https://linktr.ee/abisbooksandbrews" target="_blank" rel="noopener noreferrer">
@@ -184,7 +203,7 @@
               <div class="store-card-inner">
                 <div class="store-face store-face-front">
                   <a class="store-logo-link" href="https://www.fountainbookstore.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Fountain Bookstore website">
-                    <img class="store-logo" src="./assets/images/fountain.jfif" alt="Fountain Bookstore logo" loading="lazy" decoding="async">
+                    <img class="store-logo" src="./assets/images/fountain.png" alt="Fountain Bookstore logo" loading="lazy" decoding="async">
                   </a>
                   <h3 class="store-name">
                     <a class="store-name-link" href="https://www.fountainbookstore.com/" target="_blank" rel="noopener noreferrer">
@@ -415,7 +434,19 @@
           </div>
         </div>
       </section>
-
+      <div class="popup-note reveal">
+        <p class="popup-note-label">Bonus Pop-Up</p>
+        <p>
+          The greater Richmond area is home to not just brick-and-mortar bookstores,
+          but pop-ups and mobile bookstores as well!
+        </p>
+        <p>
+          This year, you’ll be able to find our bonus pop-up shop,
+          <strong>Lit Bae Bookshop</strong>, at
+          <strong>Resist Booksellers</strong> on
+          <strong>Saturday, April 25th</strong>!
+        </p>
+      </div>
       <section id="map" class="section-space">
         <div class="container">
           <div class="section-heading reveal">
@@ -440,19 +471,48 @@
         <div class="container">
           <div class="passport-card reveal">
             <div class="section-heading">
-              <p class="section-kicker">Bookstore Day Guide</p>
+              <p class="section-kicker">Passport Info</p>
               <h2>Passport</h2>
-              <p>Download your Indie Bookstore Day passport and collect stamps at each stop.</p>
+              
             </div>
-            <a
-              class="button button-primary"
-              href="./assets/Indie Bookstore passport 2026 (3).pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Passport
-            </a>
-            <!-- <a class="button button-primary" href="#" >Download Passport</a> -->
+
+            <div class="passport-rules">
+              <h3><center>Rules</center></h3>
+              <ul>
+                <li>
+                  Visit each store, show this passport to a bookseller, and get it stamped.
+                  No purchase is necessary to get a stamp.
+                </li>
+                <li>
+                  Collect all 11 stamps between April 25th and May 16th, and get a prize
+                  when you get your 11th stamp.
+                </li>
+                <li>
+                  After you collect all 11 stamps, submit a photo of yourself with your
+                  filled-out passport to
+                  <a href="mailto:ibdrva@gmail.com">ibdrva@gmail.com</a>
+                  to be entered in the grand prize drawing.
+                </li>
+                <li>
+                  Please include your name and phone number when you submit this.
+                </li>
+                <li>
+                  Happy stamping and happy reading!
+                </li>
+              </ul>
+            </div>
+
+            <div class="passport-actions">
+              <a
+                class="button button-primary"
+                href="./assets/Indie Bookstore passport 2026 (3).pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Passport
+              </a>
+
+            </div>
           </div>
         </div>
       </section>

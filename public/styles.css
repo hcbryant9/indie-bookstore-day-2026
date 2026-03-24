@@ -22,14 +22,21 @@
 * {
   box-sizing: border-box;
 }
-
+@font-face {
+  font-family: "Lumios Typewriter Used";
+  src: url("./assets/fonts/LumiosTypewriterUsed.woff2") format("woff2"),
+       url("./assets/fonts/LumiosTypewriterUsed.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  font-family: "Lumios Typewriter Used", "Courier New", serif;
   margin: 0;
-  font-family: "EB Garamond", serif;
   color: var(--ink);
   line-height: 1.5;
   opacity: 0;
@@ -125,7 +132,114 @@ a {
 .hero.section-space {
   padding: 12px 0 8px;
 }
+.tour-info-card {
+  max-width: 760px;
+  margin: 20px auto 0;
+  padding: 24px 24px 22px;
+  border-radius: 24px;
+  background: rgba(252, 250, 242, 0.88);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+}
 
+.tour-info-label,
+.popup-note-label {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mahogany);
+}
+
+
+.popup-note strong {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.tour-info-card p {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.tour-info-card p:last-child {
+  margin-bottom: 0;
+}
+
+.popup-note {
+  max-width: 860px;
+  margin: 28px auto 0;
+  padding: 22px 24px;
+  border-radius: 22px;
+  background: rgba(252, 250, 242, 0.82);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.popup-note p {
+  margin: 0 0 10px;
+  line-height: 1.7;
+}
+
+.popup-note p:last-child {
+  margin-bottom: 0;
+}
+
+.passport-copy {
+  max-width: 760px;
+  margin: 0 auto 24px;
+}
+
+.passport-copy p {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.passport-rules {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 22px 22px 18px;
+  border-radius: 20px;
+  background: rgba(245, 240, 216, 0.65);
+  border: 1px solid var(--line);
+  text-align: left;
+}
+
+.passport-rules h3 {
+  margin: 0 0 14px;
+  color: var(--navy);
+  font-size: 1.2rem;
+}
+
+.passport-rules ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.passport-rules li {
+  margin-bottom: 12px;
+  line-height: 1.65;
+}
+
+.passport-rules a {
+  color: var(--mahogany);
+  text-decoration: underline;
+}
+
+.passport-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
 /* Header */
 .site-header {
   position: fixed;
@@ -951,5 +1065,24 @@ a {
 
   .footer-links {
     gap: 12px;
+  }
+}
+@media (max-width: 720px) {
+  .tour-info-card,
+  .popup-note,
+  .passport-rules {
+    padding: 18px 16px;
+    border-radius: 18px;
+  }
+
+  .tour-info-card p,
+  .popup-note p,
+  .passport-copy p,
+  .passport-rules li {
+    font-size: 0.96rem;
+  }
+
+  .passport-actions {
+    flex-direction: column;
   }
 }
