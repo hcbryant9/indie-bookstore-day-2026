@@ -17,7 +17,7 @@
     <header class="site-header">
       <div class="container header-inner reveal reveal-on-load">
         <a href="#home" class="brand">
-          <!-- <img src="./assets/images/bookpeople.png" alt="Indie Bookstore Day Richmond logo"> -->
+          <img src="./assets/images/IBD_LOGO.png" alt="Indie Bookstore Day Richmond logo" class="brand-logo">
           <span>Indie Bookstore Day</span>
         </a>
 
@@ -32,24 +32,12 @@
 
     <main>
       <section class="hero section-space" id="home">
-        <div class="container">
-          <div class="hero-card reveal reveal-on-load">
-            <div class="hero-glow hero-glow-one"></div>
-            <div class="hero-glow hero-glow-two"></div>
-
-            <div class="hero-content">
-              <p class="hero-kicker">Independent Bookstore Day • Richmond</p>
-              <h1>Greater Richmond Bookstores</h1>
-              <p class="hero-tagline">Richmond is For Booklovers</p>
-
-              <!-- <div class="hero-actions">
-                <a class="button button-primary" href="#bookstores">Explore Stores</a>
-                <a class="button button-secondary" href="#map">View the Map</a>
-              </div> -->
-            </div>
-          </div>
-        </div>
-      </section>
+      <div class="container reveal reveal-on-load hero-simple">
+        <img src="./assets/images/IBD_LOGO-removebg-preview.png"
+            alt="Indie Bookstore Day Richmond logo"
+            class="hero-logo-large">
+      </div>
+    </section>
 
      
       <section class="bookstores-section section-space" id="bookstores">
@@ -62,189 +50,365 @@
           <div class="bookstores-grid">
 
             <article class="store-card reveal">
-              <a class="store-logo-link" href="https://linktr.ee/abisbooksandbrews" target="_blank" rel="noopener noreferrer" aria-label="Visit Abi's Books & Brews website">
-                <img class="store-logo" src="./assets/images/abis.jfif" alt="Abi's Books & Brews logo" loading="lazy" decoding="async">
-              </a>
-              <h3 class="store-name">
-                <a class="store-name-link" href="https://linktr.ee/abisbooksandbrews" target="_blank" rel="noopener noreferrer">
-                  Abi's Books & Brews
-                </a>
-              </h3>
-              <p class="store-hours">
-                Mon-Thu: 5am-7pm <br>
-                Fri-Sat: 5am-9pm
-              </p>
-              <p class="store-address">1212 1/2 W Cary St, Richmond, VA 23220</p>
-              
+              <div class="store-card-inner">
+                <div class="store-face store-face-front">
+                  <a class="store-logo-link" href="https://linktr.ee/abisbooksandbrews" target="_blank" rel="noopener noreferrer" aria-label="Visit Abi's Books & Brews website">
+                    <img class="store-logo" src="./assets/images/abis.jfif" alt="Abi's Books & Brews logo" loading="lazy" decoding="async">
+                  </a>
+                  <h3 class="store-name">
+                    <a class="store-name-link" href="https://linktr.ee/abisbooksandbrews" target="_blank" rel="noopener noreferrer">
+                      Abi's Books & Brews
+                    </a>
+                  </h3>
+                  <p class="store-hours">
+                    Mon-Thu: 5am-7pm <br>
+                    Fri-Sat: 5am-9pm
+                  </p>
+                  <p class="store-address">1212 1/2 W Cary St, Richmond, VA 23220</p>
+                  <button class="store-toggle" type="button" aria-expanded="false">
+                    Learn more <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <div class="store-face store-face-back">
+                  <div class="store-back-content">
+                    <p class="store-blurb">
+                      A relaxed and cozy coffee shop and bookstore, Abi's serves warm drinks, quick bites, and comfy reads.
+                    </p>
+                    <button class="store-toggle store-toggle-back" type="button" aria-expanded="true">
+                      Back <span aria-hidden="true">←</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </article>
 
             <article class="store-card reveal">
-              <a class="store-logo-link" href="https://bbgbbooks.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit BBGB website">
-                <img class="store-logo" src="./assets/images/bbgb.jpg" alt="BBGB logo" loading="lazy" decoding="async">
-              </a>
-              <h3 class="store-name">
-                <a class="store-name-link" href="https://bbgbbooks.com/" target="_blank" rel="noopener noreferrer">
-                  BBGB
-                </a>
-              </h3>
-              <p class="store-hours">
-                Mon–Sat: 10am–6pm<br>
-                Sun: 12am–5pm
-              </p>
-              <p class="store-address">3003 W Cary St, Richmond, VA 23221</p>
-              
+              <div class="store-card-inner">
+                <div class="store-face store-face-front">
+                  <a class="store-logo-link" href="https://bbgbbooks.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit bbgb website">
+                    <img class="store-logo" src="./assets/images/bbgb.jpg" alt="bbgb logo" loading="lazy" decoding="async">
+                  </a>
+                  <h3 class="store-name">
+                    <a class="store-name-link" href="https://bbgbbooks.com/" target="_blank" rel="noopener noreferrer">
+                      bbgb
+                    </a>
+                  </h3>
+                  <p class="store-hours">
+                    Mon–Sat: 10am–6pm<br>
+                    Sun: 12am–5pm
+                  </p>
+                  <p class="store-address">3003 W Cary St, Richmond, VA 23221</p>
+                  <button class="store-toggle" type="button" aria-expanded="false">
+                    Learn more <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <div class="store-face store-face-back">
+                  <div class="store-back-content">
+                    <p class="store-blurb">
+                      Located in Carytown, bbgb is a warm and well-curated children's specialty bookstore with new books for kids of all ages.
+                    </p>
+                    <button class="store-toggle store-toggle-back" type="button" aria-expanded="true">
+                      Back <span aria-hidden="true">←</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </article>
 
             <article class="store-card reveal">
-              <a class="store-logo-link" href="https://briansbooksrichmond.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Brian's Books website">
-                <img class="store-logo" src="./assets/images/brians.png" alt="Brian's Books logo" loading="lazy" decoding="async">
-              </a>
-              <h3 class="store-name">
-                <a class="store-name-link" href="https://briansbooksrichmond.com/" target="_blank" rel="noopener noreferrer">
-                  Brian's Books
-                </a>
-              </h3>
-              <p class="store-hours">
-                Fri-Sun: 11am-6pm
-              </p>
-              <p class="store-address">2514 P St, Richmond, VA 23223</p>
-              
+              <div class="store-card-inner">
+                <div class="store-face store-face-front">
+                  <a class="store-logo-link" href="https://briansbooksrichmond.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Brian's Books website">
+                    <img class="store-logo" src="./assets/images/brians.png" alt="Brian's Books logo" loading="lazy" decoding="async">
+                  </a>
+                  <h3 class="store-name">
+                    <a class="store-name-link" href="https://briansbooksrichmond.com/" target="_blank" rel="noopener noreferrer">
+                      Brian's Books
+                    </a>
+                  </h3>
+                  <p class="store-hours">
+                    Fri-Sun: 11am-6pm
+                  </p>
+                  <p class="store-address">2514 P St, Richmond, VA 23223</p>
+                  <button class="store-toggle" type="button" aria-expanded="false">
+                    Learn more <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <div class="store-face store-face-back">
+                  <div class="store-back-content">
+                    <p class="store-blurb">
+                      The newest brick-and-mortar bookshop in Richmond, Brian's specializes in used and vintage books. Long forgotten and well-loved books, magazines, comics, and a curated zine selection can be found here.
+                    </p>
+                    <button class="store-toggle store-toggle-back" type="button" aria-expanded="true">
+                      Back <span aria-hidden="true">←</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </article>
 
             <article class="store-card reveal">
-              <a class="store-logo-link" href="https://www.bookpeoplerichmond.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Book People website">
-                <img class="store-logo" src="./assets/images/bookpeople.png" alt="Book People logo" loading="lazy" decoding="async">
-              </a>
-              <h3 class="store-name">
-                <a class="store-name-link" href="https://www.bookpeoplerichmond.com/" target="_blank" rel="noopener noreferrer">
-                  Book People
-                </a>
-              </h3>
-              <p class="store-hours">
-                Mon–Sat: 10am–7pm
-              </p>
-              <p class="store-address">10464 Ridgefield Pkwy, Henrico, VA 23233</p>
-              
+              <div class="store-card-inner">
+                <div class="store-face store-face-front">
+                  <a class="store-logo-link" href="https://www.bookpeoplerichmond.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Book People website">
+                    <img class="store-logo" src="./assets/images/bookpeople.png" alt="Book People logo" loading="lazy" decoding="async">
+                  </a>
+                  <h3 class="store-name">
+                    <a class="store-name-link" href="https://www.bookpeoplerichmond.com/" target="_blank" rel="noopener noreferrer">
+                      Book People
+                    </a>
+                  </h3>
+                  <p class="store-hours">
+                    Mon–Sat: 10am–7pm
+                  </p>
+                  <p class="store-address">10464 Ridgefield Pkwy, Henrico, VA 23233</p>
+                  <button class="store-toggle" type="button" aria-expanded="false">
+                    Learn more <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <div class="store-face store-face-back">
+                  <div class="store-back-content">
+                    <p class="store-blurb">
+                      A general new and used bookshop, Book People has been a beloved neighborhood book stop since 1980.
+                    </p>
+                    <button class="store-toggle store-toggle-back" type="button" aria-expanded="true">
+                      Back <span aria-hidden="true">←</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </article>
 
             <article class="store-card reveal">
-              <a class="store-logo-link" href="https://www.fountainbookstore.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Fountain Bookstore website">
-                <img class="store-logo" src="./assets/images/fountain.jfif" alt="Fountain Bookstore logo" loading="lazy" decoding="async">
-              </a>
-              <h3 class="store-name">
-                <a class="store-name-link" href="https://www.fountainbookstore.com/" target="_blank" rel="noopener noreferrer">
-                  Fountain Bookstore
-                </a>
-              </h3>
-              <p class="store-hours">
-                Tue–Fri: 11am-6pm<br>
-                Sat: 10am-5pm <br>
-                Sun: 10am-4pm
-              </p>
-              <p class="store-address">1307 E Cary St, Richmond, VA 23219</p>
-              
+              <div class="store-card-inner">
+                <div class="store-face store-face-front">
+                  <a class="store-logo-link" href="https://www.fountainbookstore.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Fountain Bookstore website">
+                    <img class="store-logo" src="./assets/images/fountain.jfif" alt="Fountain Bookstore logo" loading="lazy" decoding="async">
+                  </a>
+                  <h3 class="store-name">
+                    <a class="store-name-link" href="https://www.fountainbookstore.com/" target="_blank" rel="noopener noreferrer">
+                      Fountain Bookstore
+                    </a>
+                  </h3>
+                  <p class="store-hours">
+                    Tue–Fri: 11am-6pm<br>
+                    Sat: 10am-5pm <br>
+                    Sun: 10am-4pm
+                  </p>
+                  <p class="store-address">1307 E Cary St, Richmond, VA 23219</p>
+                  <button class="store-toggle" type="button" aria-expanded="false">
+                    Learn more <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <div class="store-face store-face-back">
+                  <div class="store-back-content">
+                    <p class="store-blurb">
+                      Located in the heart of Richmond, Fountain has been a new, general interest bookshop since 1978 and hosts the most author programming in the state.
+                    </p>
+                    <button class="store-toggle store-toggle-back" type="button" aria-expanded="true">
+                      Back <span aria-hidden="true">←</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </article>
 
             <article class="store-card reveal">
-              <a class="store-logo-link" href="https://www.ilysmbooks.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit ILYSM Books website">
-                <img class="store-logo" src="./assets/images/ilysm.jfif" alt="ILYSM Books logo" loading="lazy" decoding="async">
-              </a>
-              <h3 class="store-name">
-                <a class="store-name-link" href="https://www.ilysmbooks.com/" target="_blank" rel="noopener noreferrer">
-                  ILYSM Books
-                </a>
-              </h3>
-              <p class="store-hours">
-                Tue-Fri: 11am-5pm <br>
-                Sat: 10am-5pm <br>
-                Sun: 10am-3pm
-              </p>
-              <p class="store-address">119 W Brookland Park Blvd, Richmond, VA 23222</p>
-              
+              <div class="store-card-inner">
+                <div class="store-face store-face-front">
+                  <a class="store-logo-link" href="https://www.ilysmbooks.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit ILYSM Books website">
+                    <img class="store-logo" src="./assets/images/ilysm.jfif" alt="ILYSM Books logo" loading="lazy" decoding="async">
+                  </a>
+                  <h3 class="store-name">
+                    <a class="store-name-link" href="https://www.ilysmbooks.com/" target="_blank" rel="noopener noreferrer">
+                      ILYSM Books
+                    </a>
+                  </h3>
+                  <p class="store-hours">
+                    Tue-Fri: 11am-5pm <br>
+                    Sat: 10am-5pm <br>
+                    Sun: 10am-3pm
+                  </p>
+                  <p class="store-address">119 W Brookland Park Blvd, Richmond, VA 23222</p>
+                  <button class="store-toggle" type="button" aria-expanded="false">
+                    Learn more <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <div class="store-face store-face-back">
+                  <div class="store-back-content">
+                    <p class="store-blurb">
+                      A Filipino, LGBTQ, woman-owned bookstore in the Brookland Park neighborhood, ILYSM is a used store with a focus on hard-to-find titles and other forms of media.
+                    </p>
+                    <button class="store-toggle store-toggle-back" type="button" aria-expanded="true">
+                      Back <span aria-hidden="true">←</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </article>
 
             <article class="store-card reveal">
-              <a class="store-logo-link" href="https://www.thelittlebookshopva.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Little Bookshop website">
-                <img class="store-logo" src="./assets/images/little.png" alt="Little Bookshop logo" loading="lazy" decoding="async">
-              </a>
-              <h3 class="store-name">
-                <a class="store-name-link" href="https://www.thelittlebookshopva.com/" target="_blank" rel="noopener noreferrer">
-                  Little Bookshop
-                </a>
-              </h3>
-              <p class="store-hours">
-                Tue-Thu: 11am-5pm<br>
-                Fri-Sat: 11am-4pm
-              </p>
-              <p class="store-address">1244 Sycamore Square Dr, Midlothian, VA 23113</p>
-              
+              <div class="store-card-inner">
+                <div class="store-face store-face-front">
+                  <a class="store-logo-link" href="https://www.thelittlebookshopva.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Little Bookshop website">
+                    <img class="store-logo" src="./assets/images/little.png" alt="Little Bookshop logo" loading="lazy" decoding="async">
+                  </a>
+                  <h3 class="store-name">
+                    <a class="store-name-link" href="https://www.thelittlebookshopva.com/" target="_blank" rel="noopener noreferrer">
+                      Little Bookshop
+                    </a>
+                  </h3>
+                  <p class="store-hours">
+                    Tue-Thu: 11am-5pm<br>
+                    Fri-Sat: 11am-4pm
+                  </p>
+                  <p class="store-address">1244 Sycamore Square Dr, Midlothian, VA 23113</p>
+                  <button class="store-toggle" type="button" aria-expanded="false">
+                    Learn more <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <div class="store-face store-face-back">
+                  <div class="store-back-content">
+                    <p class="store-blurb">
+                      A small and welcoming storefront, The Little Bookshop has books for readers of all ages.
+                    </p>
+                    <button class="store-toggle store-toggle-back" type="button" aria-expanded="true">
+                      Back <span aria-hidden="true">←</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </article>
 
             <article class="store-card reveal">
-              <a class="store-logo-link" href="https://www.midlothianbookexchange.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Midlothian Book Exchange website">
-                <img class="store-logo" src="./assets/images/midlo.png" alt="Midlothian Book Exchange logo" loading="lazy" decoding="async">
-              </a>
-              <h3 class="store-name">
-                <a class="store-name-link" href="https://www.midlothianbookexchange.com/" target="_blank" rel="noopener noreferrer">
-                  Midlothian Book Exchange
-                </a>
-              </h3>
-              <p class="store-hours">
-                Tue-Sat: 10am-5pm
-              </p>
-              <p class="store-address">13198 Midlothian Tpke, Midlothian, VA 23113</p>
-              
+              <div class="store-card-inner">
+                <div class="store-face store-face-front">
+                  <a class="store-logo-link" href="https://www.midlothianbookexchange.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Midlothian Book Exchange website">
+                    <img class="store-logo" src="./assets/images/midlo.png" alt="Midlothian Book Exchange logo" loading="lazy" decoding="async">
+                  </a>
+                  <h3 class="store-name">
+                    <a class="store-name-link" href="https://www.midlothianbookexchange.com/" target="_blank" rel="noopener noreferrer">
+                      Midlothian Book Exchange
+                    </a>
+                  </h3>
+                  <p class="store-hours">
+                    Tue-Sat: 10am-5pm
+                  </p>
+                  <p class="store-address">13198 Midlothian Tpke, Midlothian, VA 23113</p>
+                  <button class="store-toggle" type="button" aria-expanded="false">
+                    Learn more <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <div class="store-face store-face-back">
+                  <div class="store-back-content">
+                    <p class="store-blurb">
+                      A massive used bookstore, Midlothian Book Exchange's mission is to make a wide range of books accessible to readers of all ages.
+                    </p>
+                    <button class="store-toggle store-toggle-back" type="button" aria-expanded="true">
+                      Back <span aria-hidden="true">←</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </article>
 
             <article class="store-card reveal">
-              <a class="store-logo-link" href="https://shelflifebooksrva.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Shelf Life website">
-                <img class="store-logo" src="./assets/images/shelf.png" alt="Shelf Life logo" loading="lazy" decoding="async">
-              </a>
-              <h3 class="store-name">
-                <a class="store-name-link" href="https://shelflifebooksrva.com/" target="_blank" rel="noopener noreferrer">
-                  Shelf Life
-                </a>
-              </h3>
-              <p class="store-hours">
-                Mon-Sat: 10am-6pm<br>
-                Sun: 11am-6pm
-              </p>
-              <p class="store-address">2913 W Cary St, Richmond, VA 23221</p>
-              
+              <div class="store-card-inner">
+                <div class="store-face store-face-front">
+                  <a class="store-logo-link" href="https://shelflifebooksrva.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Shelf Life website">
+                    <img class="store-logo" src="./assets/images/shelf.png" alt="Shelf Life logo" loading="lazy" decoding="async">
+                  </a>
+                  <h3 class="store-name">
+                    <a class="store-name-link" href="https://shelflifebooksrva.com/" target="_blank" rel="noopener noreferrer">
+                      Shelf Life
+                    </a>
+                  </h3>
+                  <p class="store-hours">
+                    Mon-Sat: 10am-6pm<br>
+                    Sun: 11am-6pm
+                  </p>
+                  <p class="store-address">2913 W Cary St, Richmond, VA 23221</p>
+                  <button class="store-toggle" type="button" aria-expanded="false">
+                    Learn more <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <div class="store-face store-face-back">
+                  <div class="store-back-content">
+                    <p class="store-blurb">
+                      The largest indie bookshop in the city, Shelf Life has a lower level filled with new books, and an upstairs that houses multiple rooms of used books across all genres.
+                    </p>
+                    <button class="store-toggle store-toggle-back" type="button" aria-expanded="true">
+                      Back <span aria-hidden="true">←</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </article>
 
             <article class="store-card reveal">
-              <a class="store-logo-link" href="https://www.smallfriend.org/" target="_blank" rel="noopener noreferrer" aria-label="Visit Small Friend website">
-                <img class="store-logo" src="./assets/images/small.jfif" alt="Small Friend logo" loading="lazy" decoding="async">
-              </a>
-              <h3 class="store-name">
-                <a class="store-name-link" href="https://www.smallfriend.org/" target="_blank" rel="noopener noreferrer">
-                  Small Friend
-                </a>
-              </h3>
-              <p class="store-hours">
-                Wed-Fri: 11am-6pm<br>
-                Sat-Sun: 11am-5pm
-              </p>
-              <p class="store-address">1 N Lombardy St, Richmond, VA 23220</p>
-              
+              <div class="store-card-inner">
+                <div class="store-face store-face-front">
+                  <a class="store-logo-link" href="https://www.smallfriend.org/" target="_blank" rel="noopener noreferrer" aria-label="Visit small friend record and books website">
+                    <img class="store-logo" src="./assets/images/small2.jpg" alt="small friend record and books logo" loading="lazy" decoding="async">
+                  </a>
+                  <h3 class="store-name">
+                    <a class="store-name-link" href="https://www.smallfriend.org/" target="_blank" rel="noopener noreferrer">
+                      Small Friend Record and Books
+                    </a>
+                  </h3>
+                  <p class="store-hours">
+                    Wed-Fri: 11am-6pm<br>
+                    Sat-Sun: 11am-5pm
+                  </p>
+                  <p class="store-address">1 N Lombardy St, Richmond, VA 23220</p>
+                  <button class="store-toggle" type="button" aria-expanded="false">
+                    Learn more <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <div class="store-face store-face-back">
+                  <div class="store-back-content">
+                    <p class="store-blurb">
+                      Well curated and eclectic, Small Friend offers new and used books, along with zines, records, cassettes, and more.
+                    </p>
+                    <button class="store-toggle store-toggle-back" type="button" aria-expanded="true">
+                      Back <span aria-hidden="true">←</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </article>
 
             <article class="store-card reveal">
-              <a class="store-logo-link" href="https://resistbooksellers.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Resist Booksellers website">
-                <img class="store-logo" src="./assets/images/resist.jfif" alt="Resist Booksellers logo" loading="lazy" decoding="async">
-              </a>
-              <h3 class="store-name">
-                <a class="store-name-link" href="https://resistbooksellers.com/" target="_blank" rel="noopener noreferrer">
-                  Resist Booksellers
-                </a>
-              </h3>
-              <p class="store-hours">
-                Mon-Sat: 11am-6pm<br>
-                Sun: 11am-5pm
-              </p>
-              <p class="store-address">233 N Sycamore St Suite B, Petersburg, VA 23803</p>
-              
+              <div class="store-card-inner">
+                <div class="store-face store-face-front">
+                  <a class="store-logo-link" href="https://resistbooksellers.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Resist Booksellers website">
+                    <img class="store-logo" src="./assets/images/resist.jfif" alt="Resist Booksellers logo" loading="lazy" decoding="async">
+                  </a>
+                  <h3 class="store-name">
+                    <a class="store-name-link" href="https://resistbooksellers.com/" target="_blank" rel="noopener noreferrer">
+                      Resist Booksellers
+                    </a>
+                  </h3>
+                  <p class="store-hours">
+                    Mon-Sat: 11am-6pm<br>
+                    Sun: 11am-5pm
+                  </p>
+                  <p class="store-address">233 N Sycamore St Suite B, Petersburg, VA 23803</p>
+                  <button class="store-toggle" type="button" aria-expanded="false">
+                    Learn more <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+                <div class="store-face store-face-back">
+                  <div class="store-back-content">
+                    <p class="store-blurb">
+                      A community-centric bookstore in Petersburg, Resist supports and uplifts dreamers, builders, activists, and the books they love.
+                    </p>
+                    <button class="store-toggle store-toggle-back" type="button" aria-expanded="true">
+                      Back <span aria-hidden="true">←</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </article>
 
           </div>
@@ -277,10 +441,17 @@
             <div class="section-heading">
               <p class="section-kicker">Bookstore Day Guide</p>
               <h2>Passport</h2>
-              <p>Download your passport here.</p>
+              <p>Download your Indie Bookstore Day passport and collect stamps at each stop.</p>
             </div>
-
-            <a class="button button-primary" href="#" download>Download Passport</a>
+            <a
+              class="button button-primary"
+              href="./assets/Indie Bookstore passport 2026 (3).pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Passport
+            </a>
+            <!-- <a class="button button-primary" href="#" >Download Passport</a> -->
           </div>
         </div>
       </section>
@@ -304,62 +475,70 @@
   </div>
 
   <script>
-    const revealItems = document.querySelectorAll(".reveal");
+  const revealItems = document.querySelectorAll(".reveal");
 
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.12,
-        rootMargin: "0px 0px -40px 0px"
-      }
-    );
-
-    revealItems.forEach((item, index) => {
-      if (!item.classList.contains("reveal-on-load")) {
-        item.style.transitionDelay = `${Math.min(index * 40, 240)}ms`;
-      }
-      revealObserver.observe(item);
-    });
-
-    window.addEventListener("load", () => {
-      document.body.classList.add("page-loaded");
-      document.querySelectorAll(".reveal-on-load").forEach((item, index) => {
-        setTimeout(() => item.classList.add("is-visible"), 120 + index * 90);
-      });
-    });
-
-    // Copy address on click
-    document.querySelectorAll(".store-address").forEach((el) => {
-      el.addEventListener("click", async () => {
-        const text = el.textContent.trim();
-
-        try {
-          await navigator.clipboard.writeText(text);
-
-          // feedback UI
-          el.classList.add("copied");
-          el.setAttribute("data-tooltip", "Copied!");
-
-          setTimeout(() => {
-            el.classList.remove("copied");
-            el.setAttribute("data-tooltip", "Click to copy");
-          }, 1200);
-        } catch (err) {
-          console.error("Copy failed", err);
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
         }
       });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -40px 0px"
+    }
+  );
 
-      // default tooltip
-      el.setAttribute("data-tooltip", "Click to copy");
+  revealItems.forEach((item, index) => {
+    if (!item.classList.contains("reveal-on-load")) {
+      item.style.transitionDelay = `${Math.min(index * 40, 240)}ms`;
+    }
+    revealObserver.observe(item);
+  });
+
+  window.addEventListener("load", () => {
+    document.body.classList.add("page-loaded");
+    document.querySelectorAll(".reveal-on-load").forEach((item, index) => {
+      setTimeout(() => item.classList.add("is-visible"), 120 + index * 90);
+    });
+  });
+
+  document.querySelectorAll(".store-address").forEach((el) => {
+    el.addEventListener("click", async () => {
+      const text = el.textContent.trim();
+
+      try {
+        await navigator.clipboard.writeText(text);
+        el.classList.add("copied");
+        el.setAttribute("data-tooltip", "Copied!");
+
+        setTimeout(() => {
+          el.classList.remove("copied");
+          el.setAttribute("data-tooltip", "Click to copy");
+        }, 1200);
+      } catch (err) {
+        console.error("Copy failed", err);
+      }
     });
 
-  </script>
+    el.setAttribute("data-tooltip", "Click to copy");
+  });
+
+  document.querySelectorAll(".store-card").forEach((card) => {
+    const toggles = card.querySelectorAll(".store-toggle");
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        const isFlipped = card.classList.toggle("is-flipped");
+        toggles.forEach((btn) => {
+          btn.setAttribute("aria-expanded", String(isFlipped));
+        });
+      });
+    });
+  });
+</script>
 </body>
 </html>
