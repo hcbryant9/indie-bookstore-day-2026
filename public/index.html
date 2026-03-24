@@ -13,12 +13,13 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
+  <div class="header-hover-zone" aria-hidden="true"></div>
   <div class="page-shell">
     <header class="site-header">
       <div class="container header-inner reveal reveal-on-load">
         <a href="#home" class="brand">
-          <img src="./assets/images/IBD_LOGO.png" alt="Indie Bookstore Day Richmond logo" class="brand-logo">
-          <span>Indie Bookstore Day</span>
+          <!-- <img src="./assets/images/IBD_LOGO.png" alt="Indie Bookstore Day Richmond logo" class="brand-logo"> -->
+          <!-- <span>Indie Bookstore Day</span> -->
         </a>
 
         <nav class="site-nav">
@@ -474,7 +475,26 @@
     </footer>
   </div>
 
+
   <script>
+  const header = document.querySelector(".site-header");
+
+  function updateHeaderVisibility() {
+    const scrolled = window.scrollY > 30;
+
+    if (scrolled) {
+      header.classList.add("is-hidden");
+    } else {
+      header.classList.remove("is-hidden");
+    }
+  }
+
+  window.addEventListener("scroll", updateHeaderVisibility, { passive: true });
+  window.addEventListener("load", updateHeaderVisibility);
+</script>
+
+  <script>
+    
   const revealItems = document.querySelectorAll(".reveal");
 
   const revealObserver = new IntersectionObserver(
